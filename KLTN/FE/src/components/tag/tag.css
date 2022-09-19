@@ -1,0 +1,30 @@
+.tag-info{
+    font-weight: 100;
+    border: 2px solid #97D8ED;
+    padding: 2px;
+    border-radius: 5px;
+}
+.tag-danger{
+    font-weight: 100;
+    border: 2px solid #ac0e28;
+    padding: 2px;
+    border-radius: 5px;
+}
+.tag-warning{
+    font-weight: 100;
+    border: 2px solid #FFE901;
+    padding: 2px;
+    border-radius: 5px;
+}
+.tag-success{
+    font-weight: 100;
+    border: 2px solid #4f8901;
+    padding: 2px;
+    border-radius: 5px;
+}
+.tag-primary{
+    font-weight: 100;
+    border: 2px solid var(--blue);
+    padding: 2px;
+    border-radius: 5px;
+}

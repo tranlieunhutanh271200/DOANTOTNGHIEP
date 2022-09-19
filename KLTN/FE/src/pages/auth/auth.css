@@ -1,0 +1,130 @@
+.auth .authBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--white);
+  padding: 100px;
+  animation: fadein 1.5s;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.auth .authBox form {
+  position: relative;
+  text-align: center;
+  font-family: "Praise", cursive;
+}
+.auth .authBox form .login_title {
+  font-size: 4rem;
+}
+.auth .authBox form input {
+  padding: 10px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  font-size: 1.3rem;
+}
+.auth .authBox form input:focus{
+  outline: none;
+}
+.auth .authBox .login {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.auth .authBox .login button {
+  border: none;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 7px 25px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  background: var(--blue);
+  color: var(--white);
+}
+.auth .authBox .login button:hover {
+  background: var(--blue2);
+}
+.auth_wrapper {
+  width: 100%;
+  max-height: 100vh;
+  overflow: hidden;
+}
+.auth_wrapper video {
+  width: 100%;
+  object-fit: cover;
+  height: 100vh;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.auth_wrapper .forgot_page {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  background: var(--white);
+  transform: translate(-50%, -50%);
+  animation: fadein 2s;
+  border-radius: 15px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  
+}
+.auth_wrapper .forgot_page h1 {
+  font-family: "Praise", cursive;
+  text-align: center;
+  font-size: 4em;
+}
+.auth_wrapper .forgot_page form {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.auth_wrapper .forgot_page form input {
+  width: 100%;
+  padding: 10px 40px;
+  border: 2px solid var(--black2);
+  border-radius: 15px;
+  height: 50px;
+  font-size: 1em;
+}
+.auth_wrapper .forgot_page .submit {
+  display: flex;
+  justify-content: center;
+}
+.auth_wrapper .forgot_page .submit button {
+  border: none;
+  padding: 10px 30px;
+  background: var(--blue);
+  border-radius: 10px;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  cursor: pointer;
+}
+.auth_wrapper .forgot_page .submit button ion-icon {
+  margin-left: 10px;
+}
+.auth_wrapper .forgot_page .submit button:hover {
+  background: var(--blue2);
+}

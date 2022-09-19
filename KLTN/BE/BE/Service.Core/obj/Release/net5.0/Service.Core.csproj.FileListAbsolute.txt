@@ -1,0 +1,15 @@
+E:\Freelance\KLTN\Service.Core\bin\Release\net5.0\Service.Core.deps.json
+E:\Freelance\KLTN\Service.Core\bin\Release\net5.0\Service.Core.runtimeconfig.json
+E:\Freelance\KLTN\Service.Core\bin\Release\net5.0\Service.Core.runtimeconfig.dev.json
+E:\Freelance\KLTN\Service.Core\bin\Release\net5.0\Service.Core.dll
+E:\Freelance\KLTN\Service.Core\bin\Release\net5.0\Service.Core.pdb
+E:\Freelance\KLTN\Service.Core\obj\Release\net5.0\Service.Core.csproj.AssemblyReference.cache
+E:\Freelance\KLTN\Service.Core\obj\Release\net5.0\Service.Core.GeneratedMSBuildEditorConfig.editorconfig
+E:\Freelance\KLTN\Service.Core\obj\Release\net5.0\Service.Core.AssemblyInfoInputs.cache
+E:\Freelance\KLTN\Service.Core\obj\Release\net5.0\Service.Core.AssemblyInfo.cs
+E:\Freelance\KLTN\Service.Core\obj\Release\net5.0\Service.Core.csproj.CoreCompileInputs.cache
+E:\Freelance\KLTN\Service.Core\obj\Release\net5.0\Service.Core.dll
+E:\Freelance\KLTN\Service.Core\obj\Release\net5.0\refint\Service.Core.dll
+E:\Freelance\KLTN\Service.Core\obj\Release\net5.0\Service.Core.pdb
+E:\Freelance\KLTN\Service.Core\obj\Release\net5.0\Service.Core.genruntimeconfig.cache
+E:\Freelance\KLTN\Service.Core\obj\Release\net5.0\ref\Service.Core.dll

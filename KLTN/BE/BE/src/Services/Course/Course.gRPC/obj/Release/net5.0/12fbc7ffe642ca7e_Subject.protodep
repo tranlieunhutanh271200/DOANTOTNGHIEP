@@ -1,0 +1,4 @@
+obj\Release\net5.0\Protos/Subject.cs \
+obj\Release\net5.0\Protos/SubjectGrpc.cs: C:/Users/Thanh/.nuget/packages/grpc.tools/2.34.0/build/native/include/google/protobuf/timestamp.proto\
+ C:/Users/Thanh/.nuget/packages/grpc.tools/2.34.0/build/native/include/google/protobuf/any.proto\
+ Protos/Subject.proto

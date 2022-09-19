@@ -1,0 +1,51 @@
+.grid-files {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 30px;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+}
+.grid-files .file {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  height: 200px;
+  width: 200px;
+  background: rgba(80, 227, 194, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.grid-files .edit-border{
+  border: 1px solid blue;
+  position: relative;
+  padding: 10px;
+  border-radius: 10px;
+}
+.grid-files .edit-border:hover{
+  
+}
+.grid-files .edit-border .remove{
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  cursor: pointer;
+}
+.grid-files .file:hover {
+  background: rgba(80, 227, 194, 0.6);
+  box-shadow: 0 8px 32px 0 #1f26875e;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}

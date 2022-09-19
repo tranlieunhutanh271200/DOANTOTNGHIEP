@@ -1,0 +1,135 @@
+.tree_component {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  height: fit-content;
+  position: relative;
+}
+.tree_component .root button {
+  border: none;
+  padding: 15px 40px;
+  cursor: pointer;
+  background: var(--blue2);
+  color: white;
+  border-radius: 10px;
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.tree_component .root button:hover {
+  background: var(--blue2);
+}
+.tree_component .children {
+  margin-left: calc(30px);
+}
+.tree_component .children ul {
+  list-style-type: none;
+}
+.tree_component .children ul li.child {
+  margin-bottom: 5px;
+  text-align: center;
+  width: 60%;
+  border: 1px solid blue;
+  padding: 5px 40px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.tree_component .children ul li.child.current {
+  background: var(--warning);
+}
+.tree_component .children.collapsed {
+  display: none;
+  transition: all 0.5s;
+}
+.tree {
+  position: relative;
+  margin-top: 10px;
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.85rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+}
+.tree button {
+  background: transparent;
+  border: none;
+}
+.tree span {
+  font-size: 13px;
+  font-style: italic;
+  letter-spacing: 0.4px;
+  color: #a8a8a8;
+}
+
+.fa-folder-open,
+.fa-folder {
+  color: #007bff;
+}
+
+.fa-html5 {
+  color: #f21f10;
+}
+
+.tree ul.tree-ul {
+  padding-left: 5px;
+  list-style: none;
+}
+.tree ul.tree-ul li.item {
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.tree ul.tree-ul li.item button {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 15px;
+  font-weight: bold;
+}
+.tree ul.tree-ul li.item button ion-icon {
+  margin: 5px;
+}
+.tree ul.tree-ul li.item button:hover {
+  color: #007bff;
+}
+.tree ul.tree-ul li.item:before {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 10px;
+  height: 1px;
+  margin: auto;
+  content: "";
+  background-color: #666;
+}
+.tree ul.tree-ul li.item:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  content: "";
+  background-color: #666;
+}
+.tree ul.tree-ul li.item:last-child:after {
+  height: 15px;
+}
+.tree ul.tree-ul a {
+  cursor: pointer;
+}
+.tree ul.tree-ul a :hover {
+  text-decoration: none;
+}
+.tree ul.tree-ul li.item.current button {
+  color: white !important;
+  background-color: #666;
+  border-radius: 10px;
+  padding: 10px;
+}

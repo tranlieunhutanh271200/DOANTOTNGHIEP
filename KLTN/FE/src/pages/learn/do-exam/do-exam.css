@@ -1,0 +1,20 @@
+.do-exam-page-ver{
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+.do-exam-page-hor{
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

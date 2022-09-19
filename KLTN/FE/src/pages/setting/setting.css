@@ -1,0 +1,182 @@
+.setting form {
+  width: 550px;
+}
+
+.setting form * {
+  font-weight: bold;
+}
+
+.setting form label {
+  font-size: 18px;
+  color: #8f9096;
+}
+
+.setting form .form-control,
+form .form-control:focus {
+  border-color: transparent;
+  border-bottom-color: #bebcc1;
+  box-shadow: none;
+}
+
+.setting form .btn {
+  border-radius: 0px;
+  border-color: transparent;
+}
+
+.setting .btn.btn-default {
+  background: #ebebeb;
+  color: #8f9096;
+}
+
+.setting .btn.btn-primary {
+  background: #6c63ff;
+  color: white;
+}
+.notify-group{
+    position: relative;
+    overflow-y: hidden;
+    width: 100%;
+}
+.bg-glass {
+  background: rgba(255, 255, 255, 0.35) !important;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.setting .sidebar {
+  height: 100vh !important;
+  bottom: 0;
+  padding-left: 20px;
+  font-size: 1.3rem;
+  background: #6c63ff;
+}
+
+@media screen and (max-width: 940px) {
+  .sidebar {
+    font-size: 1rem;
+    padding-left: 0px;
+  }
+}
+
+.setting .sidebar .nav-link {
+  margin-bottom: 20px;
+  color: #dddce5;
+}
+
+.setting .nav-link.active {
+  color: #fff;
+}
+
+.setting .main > .row {
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    padding-left: 50px;
+    width: 100%;
+    padding-top: 200px;
+    padding-bottom: 50px;
+  }
+
+  form {
+    width: 100%;
+    margin: auto;
+  }
+}
+
+.setting .menu {
+  position: absolute;
+  right: 10%;
+  top: 30px;
+  margin: auto;
+  display: none;
+  cursor: pointer;
+  z-index: 5;
+  height: 33px;
+  width: 30px;
+}
+
+.setting .bar,
+.bar:after,
+.bar:before {
+  width: 30px;
+  height: 3px;
+  background: #6c63ff;
+  transition: all 0.2s;
+}
+
+.setting .bar {
+  position: relative;
+}
+
+.setting .bar:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 10px;
+  transition: top 0.2s 0.2s, transform 0.2s;
+}
+
+.setting .bar:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 10px;
+  transition: bottom 0.2s 0.2s, transform 0.2s;
+}
+.setting .bar.animate {
+  background: transparent;
+}
+.setting .bar.animate:after {
+  top: 0;
+  transform: rotate(45deg);
+  transition: top 0.2s, transform 0.2s 0.2s;
+  background: #fff;
+}
+
+.setting .bar.animate:before {
+  bottom: 0;
+  transform: rotate(-45deg);
+  transition: bottom 0.2s, transform 0.2s 0.2s;
+  background: #fff;
+}
+
+.setting .expand-menu {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background: #6c63ff;
+  transition: width 0.5s;
+  width: 0%;
+}
+
+.setting .expand-menu .nav-link {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  color: #dddce5;
+  font-size: 1.5rem;
+  display: none;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.setting .expand-menu .nav-link.animate {
+  display: block;
+}
+
+.setting .expand-menu .nav-link.animate-show {
+  opacity: 1;
+}
+
+.setting .expand-menu .nav-link.active {
+  color: #fff;
+}
+
+.setting .expand-menu.animate {
+  width: 100%;
+}

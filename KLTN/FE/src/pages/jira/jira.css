@@ -1,0 +1,76 @@
+.jira-page {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  z-index: 1000;
+}
+.text-center {
+  text-align: center;
+}
+.jira-page .drop .task {
+  padding: 40px;
+  background: #fc8e01;
+  border-radius: 20px;
+}
+.jira-page .column {
+  text-align: center;
+  background: rgba( 194, 172, 172, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  width: 33%;
+  min-height: 50vh;
+  height: 100%;
+}
+.jira-page .column ul {
+  list-style-type: none;
+  height: 100%;
+}   
+.jira-page .column ul li {
+  padding: 20px 30px;
+  height: 200px;
+  border-radius: 10px;
+  margin: 10px;
+}
+.jira-page .column ul.todo li {
+  background: rgba(228, 228, 228, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.jira-page .column ul.process li {                                          
+  background: rgba(44, 60, 218, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.jira-page .column ul.done li {
+  background: rgba(94, 255, 146, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.jira-page div.task-item {
+  text-align: left !important;
+}
+.form-group ul{
+  list-style: none;
+}
+.form-group ul li.project{                                                                                                    
+  width: 100%;
+  padding: 10px 40px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-bottom: 10px;
+}
+.form-group ul li.project.selected{
+  border: 1px solid blue;
+}

@@ -1,0 +1,32 @@
+.checklist1 {
+  width: 100%;
+  height: 100%;
+  display: grid;
+}
+.list-group1 {
+  width: 100%;
+  list-style-type: none;
+}
+.checkbox-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  justify-self: center;
+  justify-content: center;
+}
+.list-group-item1 {
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid grey;
+  text-align: center;
+  margin: 5px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.list-group-item1.active {
+  background: green;
+  color: white;
+}

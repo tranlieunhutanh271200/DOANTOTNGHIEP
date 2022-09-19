@@ -1,0 +1,555 @@
+syntax = "proto3";
+
+option csharp_namespace = "Course.gRPC.Protos";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/any.proto";
+service SubjectProtoService{
+	rpc SeedData(SeedRequest) returns (SeedResponse);
+	rpc GetAllSubjectByDomain(GetSubjectsByDomainRequest) returns (SubjectListModel);
+	rpc GetStudentSubjectsBySemester(GetStudentSubjectsBySemesterRequest) returns (SubjectListModel);
+	rpc GetMasterData(GetMasterDataRequest) returns (GetMasterDataResponse);
+	rpc GetSubjectDetail(GetSubjectDetailRequest) returns (GetSubjectDetailResponse);
+	rpc GetSubjects(GetSubjectsRequest) returns (GetSubjectResponse);
+	rpc GetStudent(GetStudentReq) returns (GetStudentResp);
+	rpc GetTeacher(GetTeacherReq) returns (GetTeacherResp);
+	rpc GetCurrentSubjects(GetCurrentSubjectReq) returns (GetCurrentSubjectResp);
+
+	rpc GetExam(GetExamRequest) returns (GetExamResponse);
+	rpc DoExam(DoExamRequest) returns (DoExamResponse);
+
+	rpc GetClasses(GetClassReq) returns (GetClassResp);
+	rpc GetSemesters(GetSemesterReq) returns (GetSemesterResp);
+	rpc CRUDSemester(CRUDSemesterReq) returns (CRUDResp);
+	rpc CRUDClass(CRUDClassReq) returns (CRUDResp);
+	rpc CRUDSubject(CRUDSubjectReq) returns (CRUDResp);
+	rpc CRUDQuestion(CRUDQuestionReq) returns (CRUDResp);
+	rpc CRUDSection(CRUDSectionReq) returns (CRUDResp);
+	rpc CRUDExam(CRUDExamReq) returns (CRUDResp);
+	
+	rpc CRUDContextScript(CRUDContextScriptReq) returns (CRUDResp);
+	rpc CRUDAssignmentScript(CRUDAssignmentScriptReq) returns (CRUDResp);
+	rpc CRUDDocumentScript(CRUDDocumentScriptReq) returns (CRUDResp);
+	rpc CRUDExamScript(CRUDExamScriptReq) returns (CRUDResp);
+	rpc CRUDVideoScript(CRUDVideoScriptReq) returns (CRUDResp);
+
+	rpc ImportStudents(ImportStudentRequest) returns (CRUDResp);
+	rpc GetStudents(GetStudentsReq) returns (GetStudentsResp);
+	rpc CRUDStudent(CRUDStudentReq) returns (CRUDResp);
+	rpc GetTeachers(GetTeachersReq) returns (GetTeachersResp);
+	rpc GetTeachersOfStudent(GetTeachersOfStudentReq) returns (GetTeachersResp);
+	rpc CRUDTeacher(CRUDTeacherReq) returns (CRUDResp);
+
+	rpc AssignTeacherSubject(AssignTeacherSubjectReq) returns (CRUDResp);
+	rpc CreateScoreBarem(CRUDScoreBaremReq) returns (CRUDResp);
+
+	rpc GetSchedule(GetScheduleReq) returns (GetScheduleResp);
+
+	rpc DeleteScript(DeleteScriptReq) returns (CRUDResp);
+	rpc GetQuestions(GetQuestionsReq) returns (GetQuestionsResp);
+	rpc SubmitAssignment(SubmitAssignmentReq) returns (CRUDResp);
+	rpc GetScriptAssignmentResult(GetAssignmentResultReq) returns (GetAssignmentResultResp);
+	rpc GetClassStudent(GetClassStudentReq) returns (GetClassStudentResp);
+	
+	rpc GetStudentAssignments(GetStudentAssignmentsReq) returns (GetStudentAssignmentResp);
+	rpc GetAvailableTeacher(GetAvailableTeacherReq) returns (GetAvailableTeacherResp);
+	rpc GetDeadlineEvent(GetDeadlineEventReq) returns (GetDeadlineEventResp);
+	rpc ArrangeScript(ArrangeScriptReq) returns (CRUDResp);
+	rpc CRUDStudentCategory(CRUDStudentCategoryReq) returns (CRUDResp);
+}
+message CRUDStudentCategoryReq{
+	int32 action = 1;
+	string name = 2;
+	int32 startYear = 3;
+	int32 endYear = 4;
+	string domainId = 5;
+	int32 id = 6;
+}
+message ArrangeScriptReq{
+	repeated ArrangeScriptModel arrange = 1;
+}
+message ArrangeScriptModel{
+	int32 id = 1;
+	int32 order = 2;
+}
+message CRUDVideoScriptReq{
+	int32 action = 1;
+	string title = 2;
+	string description = 3;
+	string videoPath = 4;
+	string videoId= 5;
+	int32 id = 6;
+	string sectionId = 7;
+	int32 order = 8;
+}
+message CRUDExamReq{
+	int32 action = 1;
+}
+message GetCurrentSubjectReq{
+	string studentId = 1;
+}
+message GetCurrentSubjectResp{
+	repeated SubjectModel data = 1;
+}
+message GetDeadlineEventReq{
+	string accountId = 1;
+	int32 subjectId = 2;
+}
+message GetDeadlineEventResp{
+	repeated CRUDAssignmentScriptReq data = 1;
+}
+message GetAvailableTeacherReq{
+	string id = 1;
+}
+message GetAvailableTeacherResp{
+	repeated TeacherModel data = 1;
+}
+message GetStudentAssignmentsReq{
+	string sectionId = 1;
+}
+message GetStudentAssignmentResp{
+	repeated AssignmentResultModel result = 1;
+}
+message GetClassStudentReq{
+	int32 teacherSubjectId = 1;
+}
+message GetClassStudentResp{
+	repeated StudentModel students = 1;
+}
+message GetTeacherReq{
+	string accountId = 1;
+}
+message GetTeacherResp{
+	TeacherModel teacher = 1;
+}
+message GetStudentReq{
+	string accountId = 1;
+}
+message GetStudentResp{
+	StudentModel student = 1;
+}
+message GetAssignmentResultReq{
+	string studentId = 1;
+	int32 teacherSubjectId = 2;
+}
+message GetAssignmentResultResp{
+	repeated AssignmentResultModel assignmentResult = 1;
+}
+message AssignmentResultModel{
+	string id = 1;
+	string title = 2;
+	bool isSubmit = 3;
+	string fileName = 4;
+	string fileId = 5;
+	string filePath = 6;
+	string studentId = 7;
+	int32 assignmentId = 8;
+	string submitDate = 9;
+	string updatedDate = 10;
+}
+message AssignmentModel{
+	int32 id = 1;
+}
+message SubmitAssignmentReq{
+	int32 assignmentId = 1;
+	string fileId = 2;
+	string filePath = 3;
+	string fileName = 4;
+	string studentId = 5;
+	int32 action = 6;
+	string id = 7;
+	string absolutePath = 9;
+}
+message GetQuestionsReq{
+	string teacherId = 1;
+}
+message GetQuestionsResp{
+	repeated QuestionModel questions = 1;
+}
+message DeleteScriptReq{
+	int32 id = 1;
+}
+message GetTeachersOfStudentReq{
+	string accountId = 1;
+}
+message GetScheduleReq{
+	string studentId = 1;
+	int32 year = 2;
+	string startDate = 3;
+	string endDate = 4;
+}
+message GetScheduleResp{
+	repeated Schedule data = 1;
+	string cards = 2;
+}
+message Schedule{
+	string date = 1;
+	repeated ScheduleModel schedules = 2;
+}
+message ScheduleModel{
+	string id = 1;
+	int32 subjectId = 2;
+	string subjectName = 3;
+	string teacherName = 4;
+	string startTime = 5;
+	int32 totalPeriod = 6;
+	string endTime = 7;
+	string classId = 8;
+}
+message GetClassReq{
+	string domainId = 1;
+}
+message GetClassResp{
+	repeated TeacherSubjectModel classes = 1;
+}
+message GetSemesterReq{
+	string domainId = 1;
+	int32 year = 2;
+}
+message GetSemesterResp{
+	repeated SemesterModel semesters = 1;
+}
+message SemesterModel {
+	int32 id = 1;
+	string domainId = 2;
+	int32 year = 3;
+	string semesterName = 4;
+	string semesterStart = 5;
+	string semesterEnd = 6;
+	repeated TeacherSubjectModel subjects = 7;
+	int32 totalClasses = 8;
+}
+message ClassModel{
+	string id = 1;
+	string className = 2;
+	string town = 3;
+	string floor = 4;
+	string room = 5;
+	string domainId = 6;
+	string code = 7;
+}
+message CRUDClassReq{
+	int32 action = 1;
+	int32 id = 2;
+	string code = 3;
+	string teacherId = 4;
+	string semesterId = 5;
+	string subjectId = 6;
+	string startDate = 7;
+	string endDate = 8;
+	repeated StudentModel students = 9;
+	repeated int32 dateOfWeek = 10;
+}
+message CRUDSemesterReq{
+	int32 action = 1;
+	string domainId = 2;
+	int32 year = 3;
+	string semesterName = 4;
+	string semesterStart = 5;
+	string semesterEnd = 6;
+	int32 id = 7;
+}
+message AssignTeacherSubjectReq{
+	string subjectId = 1;
+	string teacherId = 2;
+	string classId = 3;
+	string startAt = 4;
+	string endAt = 5;
+}
+message CRUDScoreBaremReq{
+	int32 action = 1;
+}
+message GetSubjectsRequest{
+	string domainId = 1;
+}
+message GetSubjectResponse{
+
+}
+message CRUDSubjectReq{
+	int32 action = 1;
+	string id = 2;
+	string domainId = 3;
+	string title = 4;
+	string coverImageUrl = 5;
+	string description = 6;
+	int32 credit = 7;
+	double pricePerCredit = 8;
+	int32 totalPeriod = 9;
+	string code = 10;
+}
+message CRUDTeacherReq{
+	int32 action = 1;
+	string fullName = 2;
+	string teacherId = 3;
+	string title = 4;
+	double salary = 5;
+	string identityNo = 6;
+	string phoneNumber = 7;
+	string permanentAddress = 8;
+	string currentAddress = 9;
+	string birthDate = 10;
+	string joinDate = 11;
+	string accountId = 12;
+	string id = 13;
+	string avatarId = 14;
+	string avatarUrl = 15;
+	string domainId = 16;
+	int32 gender = 17;
+}
+message CRUDQuestionReq{
+	string action = 1;
+	QuestionModel question = 2;
+}
+message GetStudentsReq{
+	string domainId = 1;
+}
+message CRUDStudentReq{
+	int32 action = 1;
+	string fullName = 2;
+	string studentId = 3;
+	string phoneNumber = 4;
+	string identityNo = 5;
+	string permanentAddress= 6;
+	string currentAddress = 7;
+	string birthDate = 8;
+	string accountId = 9;
+	string avatarId = 10;
+	string avatarUrl = 11;
+	string domainId = 12;
+	string id = 13;
+	int32 gender = 14;
+}
+message GetTeachersReq{
+	string domainId = 1;
+}
+//create script
+message CRUDResp{
+	bool result = 1;
+	int32 code = 2;
+}
+//CreateSection
+message CRUDSectionReq {
+	string rootId = 1;
+	string title = 2;
+	string fromDate = 3;
+	string toDate = 4;
+	int32 teacherSubjectId = 5;
+	int32 action = 6;
+	string id = 7;
+}
+message CRUDContextScriptReq{
+	int32 action = 1;
+	string sectionId = 2;
+	int32 id = 3;
+	string heading = 4;
+	string body = 5;
+	string footer = 6;
+	int32 order = 7;
+}
+message CRUDAssignmentScriptReq{
+	int32 action = 1;
+	string sectionId = 2;
+	int32 id = 3;
+	string title = 4;
+	string detail = 5;
+	string description = 6;
+	string openAt = 7;
+	string dueTo = 8;
+	bool isReopen = 9;
+	int32 order = 10;
+}
+message CRUDDocumentScriptReq{
+	int32 action = 1;
+	string documentTitle = 2;
+	string documentPassword = 3;
+	string documentUrl = 4;
+	string fileId = 5;
+	string sectionId = 6;
+	int32 id = 7;
+	string fileType = 8;
+}
+message CRUDExamScriptReq{
+	int32 action = 1;
+	string examId = 2;
+	int32 duration = 3;
+	int32 totalAttempt = 4;
+	bool isShuffle = 5;
+	string openAt = 6;
+	string dueTo = 7;
+	int32 id = 8;
+	string sectionId = 9;
+	int32 order = 10;
+}
+//ImportStudents
+message ImportStudentRequest{
+	repeated StudentModel students = 1;
+}
+message GetStudentsResp{
+	repeated StudentModel students = 1;
+}
+message GetTeachersResp{
+	repeated TeacherModel teachers = 1;
+}	
+message StudentModel{
+	string fullName = 1;
+	string studentID = 2;
+	string permanentAddress = 3;
+	string identityNo = 4;
+	string phoneNumber = 5;
+	string currentAddress = 6;
+	string birthDate = 7;
+	string joinDate = 8;
+	string domainId = 9;
+	string id = 10;
+	string accountId = 11;
+}
+message TeacherModel{
+	string fullName = 1;
+	string teacherID = 2;
+	string permanentAddress = 3;
+	string identityNo = 4;
+	string phoneNumber = 5;
+	string currentAddress = 6;
+	string birthDate = 7;
+	string joinDate = 8;
+	string domainId = 9;
+	string id = 10;
+	string accountId = 11;
+}
+//create script
+
+//GetExam
+message GetExamRequest{
+	string teacherId = 1;
+}
+message GetExamResponse{
+	repeated ExamModel exams = 1;
+}
+message ExamModel{
+	string id = 1;
+	string description = 2;
+	int32 duration = 3;
+	int32 totalQuestions = 4;
+	string title = 5;
+}
+message DoExamRequest{
+	string examId = 1;
+	string accountId = 2;
+}
+message DoExamResponse{
+	string id = 1;
+	repeated QuestionModel questions = 2;
+}
+message QuestionModel{
+	string id = 1;
+	string title = 2;
+	string content = 3;
+	bool isCountdown = 4;
+	int32 textFormat = 5;
+	repeated AnswerModel answers = 6;
+}
+message AnswerModel{
+	string id = 1;
+	string content = 2;
+	bool isCorrectAnswer = 3;
+}
+message GetMasterDataRequest{
+	string accountId = 1;
+}
+message GetMasterDataResponse{
+	repeated MasterDataModel masterdata = 1;
+}
+message MasterDataModel{
+	int32 year = 1;
+	repeated SemesterModel semesters = 2;
+}
+message TeacherSubjectModel{
+	int32 id = 1;
+	string teacherId = 2;
+	string teacherName = 3;
+	int32 semesterId = 4;
+	string code = 5;
+	string subjectId = 6;
+	SubjectModel subject = 7;
+	repeated StudentModel students = 8;
+	int32 totalStudent = 9;
+}
+message SubjectSectionModel{
+	string id = 1;
+	int32 order = 2;
+	string fromDate = 3;
+	string toDate = 4;
+	string rootId = 5;
+	repeated SubjectSectionModel children = 6;
+	repeated SectionScriptModel scripts = 7;
+	string title = 8;
+	int32 teacherSubjectId = 9;
+}
+message SectionScriptModel{
+	int32 id = 1;
+	string sectionId = 2;
+	int32 order = 3;
+	string scriptType = 4;
+	string assignmentScript_Title = 5;
+	string detail = 6;
+	string assignmentScript_Description = 7;
+	string AssignmentScript_OpenAt = 8;
+	string assignmentScript_DueTo = 9;
+	bool isReopen = 10;
+	string heading = 11;
+	string body = 12;
+	string footer = 13;
+	string documentTitle = 14;
+	string documentPassword = 15;
+	string documentUrl = 16;
+	string fileType = 17;
+	string examId = 18;
+	int32 duration = 19;
+	int32 totalAttempt = 20;
+	bool isShuffle = 21;
+	string openAt = 22;
+	string dueTo = 23;
+	string quizId = 24;
+	string title = 25;
+	string description = 26;
+	bool isOnetimeQuiz = 27;
+	string fileIds = 28;
+	bool IsSubmit = 29;
+	string videoScript_title = 30;
+	string videoScript_description = 31;
+	string videoPath = 32;
+	string videoId = 33;
+}
+message SubjectModel{
+	string id = 1;
+	string title = 2;
+	string coverImageUrl = 3;
+	string description = 4;
+	int32 credit = 5;
+	double pricePerCredit = 6;
+	string code = 7;
+}
+message GetSubjectDetailRequest{
+	string subjectId = 1;
+	string classId = 2;
+	string accountId = 3;
+}
+message GetSubjectDetailResponse{
+	repeated SubjectSectionModel sections = 1;
+}
+message GetSubjectsByDomainRequest{
+	string domainId = 1;
+}
+message SubjectListModel{
+	repeated SubjectModel subjects = 1;
+}
+message GetStudentSubjectsBySemesterRequest{
+	string studentId = 1;
+	string semesterId = 2;
+}
+message SeedRequest{
+	string domainId = 1;
+	string accountId = 2;
+}
+message SeedResponse{
+	bool result = 1;
+}

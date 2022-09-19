@@ -1,0 +1,94 @@
+.logwork-page {
+  position: relative;
+  padding: 10px;
+  padding-top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.logwork-page .loggable{
+  cursor: pointer;
+}
+.logwork-page .main-tab {
+  width: 69%;
+  height: 100%;
+  position: relative;
+}
+.logwork-page .bg-blur {
+  position: absolute;
+  background: #003986;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  opacity: 0.1;
+}
+
+.logwork-page .main-tab table {
+  z-index: 2;
+  color: white;
+  background: #003986;
+  text-align: center;
+  width: 100%;
+  height: fit-content;
+  min-height: 50%;
+  max-height: 80%;
+  border-radius: 5px;
+  overflow: hidden;
+  border-collapse: collapse;
+  table-layout: fixed;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+.logwork-page .main-tab table tbody tr {
+  padding: 10px 20px;
+  height: 100%;
+  height: 40px;
+  border: none;
+}
+.logwork-page .main-tab table tbody tr td{
+  width: fit-content;
+}
+/* Zebra striping */
+.logwork-page .main-tab table tbody tr:nth-of-type(odd) {
+  background: var(--grey);
+  color: black;
+}
+.logwork-page .main-tab table thead {
+  background: #fc8e01;
+  width: 100%;
+  margin-right: 10px;
+  height: 40px;
+}
+.logwork-page .main-tab table td{
+  width: fit-content;
+}
+.logwork-page .additional-tab {
+  position: relative;
+  width: 30%;
+  height: 100%;
+}
+.logwork-page .additional-tab .tab-1{
+  background: var(--grey);
+  margin-bottom: 10px;
+}
+.logwork-page .additional-tab .tab-2{
+  background: orange;
+}
+@media (max-width: 400px) {
+  .logwork-page {
+    position: relative;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .logwork-page .main-tab {
+    width: 100%;
+  }
+  .logwork-page .additional-tab {
+    margin-top: 10px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,153 @@
+.online-meeting {
+  position: relative;
+  width: 100%;
+  height: calc(95% - 10px);
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.online-meeting .main-screen {
+  position: relative;
+  width: 80%;
+  height: 100%;
+  margin-right: 2%;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  overflow: hidden;
+}
+.online-meeting .main-screen .stream-config {
+  width: 100%;
+  height: 60px;
+  padding: 15px;
+  position: relative;
+  top: 0;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.online-meeting .main-screen .stream-config ion-icon {
+  font-size: 2.5em;
+}
+.online-meeting .main-screen .stream-config .function{
+  display: flex;
+}
+.online-meeting .main-screen .stream-config .function span{
+  margin: 10px;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+}
+.online-meeting .main-screen .stream-config .function i.splitter{
+  border-right: 1px solid black;
+}
+.online-meeting .main-screen .stream-config .function span:hover ion-icon{
+  color: green;
+}
+.online-meeting .main-screen .stream-screen{
+  position: relative;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid black;
+  height: calc(100% - 80px);
+}
+.online-meeting .participants {
+  padding: 10px;
+  width: 20%;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  max-height: 100%;
+  overflow-y: scroll;
+}
+.online-meeting .participants .student {
+  position: relative;
+  padding: 10px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  height: auto;
+}
+.online-meeting .participants .student:hover {
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.online-meeting .participants .student .avatar {
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+}
+.online-meeting .participants .student .avatar img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.online-meeting .participants .student .mic:hover ion-icon{
+  color: green;
+}
+.online-meeting .participants .student .more:hover ion-icon{
+  color: green;
+}
+.online-meeting .participants .student .box{
+  position: relative;
+  height: 200px;
+  width: 100%;
+}
+.online-meeting .participants .student .box .pin{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.online-meeting .participants .student .box .pin ion-icon{
+  transform: rotate(45deg);
+}
+@media (max-width: 600px) {
+  .online-meeting {
+    flex-direction: column;
+  }
+  .online-meeting .main-screen {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .online-meeting .participants {
+    width: 100%;
+  }
+}
+@media (max-width: 1700px) {
+  .online-meeting {
+    flex-direction: column;
+  }
+  .online-meeting .main-screen {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .online-meeting .participants {
+    width: 100%;
+  }
+}
+

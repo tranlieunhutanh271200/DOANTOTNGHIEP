@@ -1,0 +1,25 @@
+.edit-mode{
+    padding: 15px;
+    border: 1px solid blue;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.context-script{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.edit-mode .remove{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: red;
+}
+.edit-mode .save{
+    position: absolute;
+    top: 5px;
+    right: 45px;
+    color: blue;
+}

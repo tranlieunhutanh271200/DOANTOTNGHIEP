@@ -1,0 +1,24 @@
+.task-manage-page{
+    padding: 10px;
+    width: 100%;
+    position: relative;
+}
+.task-manage-page .filter{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+.task-manage-page .filter select{
+    margin: 10px;
+    margin-top: 0;
+}
+.task-manage-page .filter input{
+    margin: 10px;
+    margin-top: 0;
+}
+.task-manage-page .detail{
+    width: 100%;
+}
+.task-manage-page .detail table td.d-center{
+    text-align: center;
+}

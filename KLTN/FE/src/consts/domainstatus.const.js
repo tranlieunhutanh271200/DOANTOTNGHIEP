@@ -1,0 +1,6 @@
+export const DOMAINSTATUS = {
+    NEW: 'NEW',
+    REVIEW: 'REVIEW',
+    APPROVED: 'APPROVED',
+    DECLINED: 'DECLINED'
+}

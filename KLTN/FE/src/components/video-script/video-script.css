@@ -1,0 +1,23 @@
+.video-script .edit-mode{
+    border: 1px solid red;
+    padding: 10px;
+    position: relative
+}
+.video-script .edit-mode .remove{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: red;
+}
+.video-script .edit-mode .save{
+    position: absolute;
+    top: 5px;
+    right: 45px;
+    color: blue;
+}
+.video-script .edit-mode .up{
+
+}
+.video-script .edit-mode .down{
+    
+}

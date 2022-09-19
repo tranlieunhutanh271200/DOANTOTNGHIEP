@@ -1,0 +1,36 @@
+.card_schedule{
+    width: 100%;
+    height: 135px;
+    font-size: 1.2em;
+    padding: 10px;
+}
+.card_schedule:hover{
+    background: var(--jade);
+}
+@media (max-width: 991px) {
+    .card_schedule{
+        font-size: 1em;
+    }
+    .card_schedule .title h3{
+        font-size: 1em;
+    }
+}
+@media (max-width: 691px) {
+    .card_schedule{
+        font-size: 1em;
+    }
+    .card_schedule .title h3{
+        font-size: 0.75em;
+    }
+    .card_schedule .title h3 ion-icon{
+        font-size: 0.75em;
+    }
+}
+@media (max-width: 291px) {
+    .card_schedule{
+        font-size: 0.5em;
+    }
+    .card_schedule .title h3{
+        font-size: 0.75em;
+    }
+}

@@ -1,0 +1,17 @@
+.report-home{
+    padding: 10px;
+}
+.report-project{
+    padding: 10px;
+    height: 100%;
+}
+.separate{
+    border: 1px solid red;
+}
+li.local-item{
+ margin: 2px;
+ cursor: pointer;
+}
+.ticket-report{
+    padding: 10px;
+}

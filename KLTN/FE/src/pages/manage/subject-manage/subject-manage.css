@@ -1,0 +1,6 @@
+.subject-manage-page {
+  padding: 10px;
+  position: relative;
+  height: calc(100% - 50px);
+  width: 100%;
+}

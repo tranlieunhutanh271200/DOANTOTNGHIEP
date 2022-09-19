@@ -1,0 +1,62 @@
+.lobby-page {
+  padding: 10px;
+  padding-top: 0;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(11.5px);
+  -webkit-backdrop-filter: blur(11.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lobby-page .lobby-box {
+  width: 50%;
+  height: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(11.5px);
+  -webkit-backdrop-filter: blur(11.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.lobby-page .lobby-box .box-header{
+    padding: 10px;
+    font-weight: 500;
+    color: white;
+}
+.lobby-page .lobby-box .box-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.lobby-page .lobby-box .box-body ion-icon{
+    font-size: 10rem;
+    color: white;
+}
+.lobby-page .lobby-box .box-footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lobby-page .lobby-box .box-footer .control{
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.lobby-page .lobby-box .box-footer .control ion-icon{
+    padding: 10px;
+    color: white;
+}

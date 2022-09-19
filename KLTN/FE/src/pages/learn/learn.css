@@ -1,0 +1,114 @@
+.learning-page {
+  position: relative;
+  width: 100%;
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  max-height: calc(95% - 20px);
+  min-height: calc(95% - 20px);
+}
+.learning-page .learning-nav {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 15%;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.learning-page .learning-nav .course-filter {
+  padding: 40px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.learning-page .learning-nav .course-filter select {
+  height: 40px;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 10px;
+}
+.learning-page .learning-nav .course-filter ul {
+  padding: 10px;
+  list-style-type: none;
+}
+.learning-page .learning-nav .course-filter .timeline{
+  font-size: 1em;
+}
+.learning-area .learning-nav .course-filter .timeline ul{
+  transition: all 0.5s;
+}
+.ReactCollapse--collapse{
+  transition: all 0.3s;
+}
+ul.semesters li.semester{
+  cursor: pointer;
+  margin-left: 10px;
+  margin-top: 10px;
+  padding: 10px 30px;
+  background: var(--jade);
+  border-radius: 10px;
+  opacity: 0.8;
+}
+ul.semesters li.semester:hover{
+  opacity: 2;
+}
+ul.semesters li.semester:first-child{
+  margin-top: 0;
+}
+.learning-page .learning-navigation {
+  width: 100%;
+  min-height: 80vh;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.learning-page .learning-area {
+  position: inherit;
+  max-height: calc(90% - 20px);
+  overflow-y: scroll;
+  width: 84%;
+  background: var(--blue3);
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+  right: 0;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.custom_btn {
+  background: var(--success) !important;
+}
+@media (max-width: 1200px) {
+  .learning-area{
+    flex-direction: column;
+  }
+}
+@media (max-width: 1000px) {
+  .learning-page{
+    flex-direction: column;
+  }
+  .learning-page .learning-nav{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .learning-page .learning-nav .course-filter{
+    flex-direction: row;
+  }
+  .learning-page .learning-area{
+    width: 100%;
+  }
+}
